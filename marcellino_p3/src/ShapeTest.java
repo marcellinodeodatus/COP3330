@@ -11,7 +11,7 @@ class ShapeTest {
     @Test
     public void testSquareArea() {
         Shape2D shape = new Square(10);
-        assertEquals(0.25, shape.getArea());
+        assertEquals(100, shape.getArea());
     }
 
     @Test
@@ -76,7 +76,7 @@ class ShapeTest {
 
     @Test
     public void testCubeVolume() {
-        Shape3D shape = new Cube(0.5);
+        Shape3D shape = new Cube(10);
         assertEquals(1000, shape.getVolume());
     }
 
