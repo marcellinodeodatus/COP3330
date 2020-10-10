@@ -1,6 +1,6 @@
-public class Cube implements Shape,Shape3D {
-    private double side;
-    private String name;
+public class Cube extends Shape3D {
+    private final double side;
+    private final String name;
 
 
     public Cube(double side) {
@@ -10,17 +10,18 @@ public class Cube implements Shape,Shape3D {
     }
 
 
+    @Override
+    public double getVolume() {
+        return side*side*side;
+    }
+
+    @Override
     public double getArea() {
-        return 6*side*side;
+        return side*side*6;
     }
 
     public String getName() {
         return name;
-    }
-
-
-    public double getVolume() {
-        return side*side*side;
     }
 
 

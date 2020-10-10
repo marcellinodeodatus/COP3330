@@ -1,3 +1,3 @@
-public interface Shape2D {
-    public double getArea();
+abstract class Shape2D extends Shape {
+
 }

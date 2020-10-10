@@ -1,6 +1,6 @@
-public class Square implements Shape, Shape2D {
-    private double side;
-    private String name;
+public class Square extends Shape2D {
+    private final double side;
+    private final String name;
 
 
     public Square(double side) {

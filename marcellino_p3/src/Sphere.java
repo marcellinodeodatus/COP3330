@@ -1,9 +1,9 @@
 import java.text.DecimalFormat;
 
-public class Sphere implements Shape,Shape3D {
+public class Sphere extends Shape3D {
 
-    private double radius;
-    private String name;
+    private final double radius;
+    private final String name;
 
 
 
@@ -13,18 +13,20 @@ public class Sphere implements Shape,Shape3D {
         this.name="sphere";
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public double getVolume() {
+        DecimalFormat df = new DecimalFormat("####0.00");
+        return Double.parseDouble(df.format((1.333333333333)*(Math.PI)*(radius*radius*radius)));
     }
+
+    @Override
     public double getArea() {
         DecimalFormat df = new DecimalFormat("####0.00");
         return Double.parseDouble(df.format(4*Math.PI*radius*radius));
     }
 
-
-    public double getVolume() {
-        DecimalFormat df = new DecimalFormat("####0.00");
-        return Double.parseDouble(df.format((1.333333333333)*(Math.PI)*(radius*radius*radius)));
+    public String getName() {
+        return name;
     }
 
 

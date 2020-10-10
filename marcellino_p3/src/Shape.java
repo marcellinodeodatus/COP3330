@@ -1,4 +1,4 @@
-public interface Shape {
-    public double getArea();
-    public String getName();
+abstract class Shape {
+    public abstract String getName();
+    public abstract double getArea();
 }

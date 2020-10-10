@@ -1,4 +1,3 @@
-public interface Shape3D {
-    public double getArea();
-    public double getVolume();
+abstract class Shape3D extends Shape {
+    public abstract double getVolume();
 }

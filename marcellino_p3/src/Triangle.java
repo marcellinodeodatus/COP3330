@@ -1,7 +1,7 @@
-public class Triangle implements Shape, Shape2D {
-    private double base;
-    private double height;
-    private String name;
+public class Triangle extends Shape2D {
+    private final double base;
+    private final double height;
+    private final String name;
 
 
     public Triangle(double base,double height) {

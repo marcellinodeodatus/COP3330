@@ -1,22 +1,23 @@
-public class Circle implements Shape, Shape2D {
-    private double side;
-    private String name;
+public class Circle extends Shape2D {
+    private final double radius;
+    private final String name;
 
 
-    public Circle(double side) {
+    public Circle(double radius) {
         super();
-        this.side = side;
+        this.radius = radius;
         this.name="circle";
     }
 
 
+    @Override
     public double getArea() {
-        return side*side;
+        double pi = 3.14;
+        return pi*radius*radius ;
     }
 
+    @Override
     public String getName() {
         return name;
     }
-
-
 }
